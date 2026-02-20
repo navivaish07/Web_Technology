@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5a67d8;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+
+    <form onsubmit="return validateForm()">
+
+        <label>Name</label>
+        <input type="text" id="name" required>
+        <div id="nameError" class="error"></div>
+
+        <label>Email</label>
+        <input type="text" id="email" required>
+        <div id="emailError" class="error"></div>
+
+        <label>Mobile Number</label>
+        <input type="text" id="mobile" required>
+        <div id="mobileError" class="error"></div>
+
+        <button type="submit">Register</button>
+
+    </form>
+</div>
+
+<script>
+function validateForm() {
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
+
+    let valid = true;
+
+    // Clear previous errors
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("emailError").innerHTML = "";
+    document.getElementById("mobileError").innerHTML = "";
+
+    // Name mandatory
+    if (name === "") {
+        document.getElementById("nameError").innerHTML = "Name is required";
+        valid = false;
+    }
+
+    // Email mandatory + format
+    if (email === "") {
+        document.getElementById("emailError").innerHTML = "Email is required";
+        valid = false;
+    } else {
+        let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!email.match(emailPattern)) {
+            document.getElementById("emailError").innerHTML = "Enter valid email";
+            valid = false;
+        }
+    }
+
+    // Mobile mandatory + 10 digits
+    if (mobile === "") {
+        document.getElementById("mobileError").innerHTML = "Mobile number is required";
+        valid = false;
+    } else {
+        let mobilePattern = /^[0-9]{10}$/;
+        if (!mobile.match(mobilePattern)) {
+            document.getElementById("mobileError").innerHTML = "Enter valid 10-digit mobile number";
+            valid = false;
+        }
+    }
+
+    if (valid) {
+        alert("Registration Successful!");
+    }
+
+    return valid;
+}
+</script>
+
+</body>
+</html>
