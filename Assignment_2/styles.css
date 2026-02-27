@@ -1,0 +1,159 @@
+
+/* External CSS for ScoopsVerse */
+
+.main-title{
+    text-align:center;
+}
+
+.main-title{
+    display:flex;
+    justify-content:center;
+}
+
+
+/* TABLE STYLING */
+table{
+    width:80%;
+    margin:auto;
+    background:white;
+    text-align:center;
+    border-collapse:collapse;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+table thead{
+    background:linear-gradient(135deg, #d97706, #f97316);
+    color:white;
+}
+
+table th{
+    padding:15px;
+    font-size:16px;
+    font-weight:600;
+}
+
+table td{
+    padding:12px;
+    border-bottom:1px solid #f0f0f0;
+}
+
+table tr:hover{
+    background:#fff7ed;
+}
+
+/* FORM STYLING */
+form input, form select{
+    padding:12px;
+    width:100%;
+    border:2px solid #fed7aa;
+    border-radius:8px;
+    font-size:15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form input:focus, form select:focus{
+    outline:none;
+    border-color:#d97706;
+}
+
+form label{
+    font-weight:600;
+    color:#333;
+}
+
+/* HEADING STYLING */
+h2{
+    color:#d97706;
+    font-size:32px;
+    text-align:center;
+}
+
+/* WHY SECTION */
+.why-section{
+    padding:80px 40px;
+    background:linear-gradient(to bottom, #fff 0%, #fff7ed 100%);
+    text-align:center;
+}
+
+.why-section h2{
+    font-size:36px;
+    margin-bottom:60px;
+    color:#d97706;
+}
+
+/* HORIZONTAL ROW */
+.why-row{
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    gap:30px;
+    flex-wrap:wrap;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+/* CARDS */
+.why-card{
+    background:white;
+    padding:40px 30px;
+    width:23%;
+    min-width:250px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:all 0.4s ease;
+    border:2px solid #fff7ed;
+}
+
+.why-card img{
+    width:80px;
+    height:80px;
+    margin-bottom:20px;
+}
+
+.why-card h3{
+    margin:15px 0;
+    font-size:20px;
+    color:#d97706;
+}
+
+.why-card p{
+    font-size:15px;
+    color:#666;
+    line-height:1.6;
+    margin:0;
+}
+
+/* HOVER EFFECT */
+.why-card:hover{
+    transform:translateY(-15px);
+    box-shadow:0 20px 40px rgba(217, 119, 6, 0.2);
+    border-color:#d97706;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .why-card{
+        width:45%;
+    }
+    
+    .products{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media(max-width:600px){
+    .why-card{
+        width:100%;
+    }
+    
+    .products{
+        grid-template-columns:1fr;
+    }
+    
+    .hero{
+        font-size:32px;
+        height:300px;
+    }
+}
