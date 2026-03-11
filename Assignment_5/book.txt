@@ -1,4 +1,0 @@
-Java Programming
-Servlet & JSP
-Spring Boot
-Angular JS
