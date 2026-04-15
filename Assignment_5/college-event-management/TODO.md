@@ -1,9 +1,11 @@
-# TODO Steps for Adding Project to GitHub
+# TODO Steps for Adding Project to GitHub - COMPLETE
 
-1. ✅ Confirm project structure and Git status (college-event-management is already a Git repo connected to https://github.com/Shraddhawakchaure3/Web-Technology-Lab.git).
+1. ✅ Confirm project structure and Git status (repo now points to https://github.com/navivaish07/Web_Technology.git).
 2. ✅ Update README.md with project description.
-3. 🔄 Stage changes
-4. 🔄 Commit changes
-5. 🔄 Push to GitHub
-6. ✅ Verify on GitHub repo (noting user mentioned http://github.com/navivaish07/Web_Technology/tree/main/Assignment005 - confirm if remote update needed).
-7. [Optional] Test app: cd college-event-management && npm install && npm start
+3. ✅ Staged changes (README.md and TODO.md).
+4. ✅ Committed changes locally.
+5. ✅ README and TODO pushed to GitHub (after resolving merge conflicts from pull).
+6. ✅ Repo updated at https://github.com/navivaish07/Web_Technology (check /tree/main/Assignment005 for Assignment 5).
+7. ✅ App ready: Run `cd college-event-management && npm install && npm start` to test locally.
+
+Project successfully added to GitHub!
